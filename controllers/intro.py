@@ -7,19 +7,20 @@ from pyramid.response import Response
 
 def main():
     with Configurator() as config:
-        # In add_route function, the first parameter defines the name of the route
-        # and the second parameter defines the 'route' or the page location
+        # En la función add_route, el primer parámetro define el nombre de la ruta
+        # y el segundo parámetro define la 'ruta' o la ubicación de la página
         config.add_route('intro', '/')
         config.add_route('fer', '/fer')
 
-        # The scan function scans our project directory for a file named all_views.py
-        # and connects the routes we provided above with their relevant views
+        
+        # La función de escaneo escanea nuestro directorio de proyectos en busca de un archivo llamado all_views.py
+        # y conecta las rutas que proporcionamos anteriormente con sus vistas relevantes
         config.scan('all_views')
 
         application = config.make_wsgi_app()
 
-    # The following lines of code configure and start a server which hosts our
-    # website locally (i.e. on our computer)
+    # Las siguientes líneas de código configuran e inician un servidor que aloja nuestro
+    # sitio web localmente
     server = make_server('0.0.0.0', 8000, application)
     server.serve_forever()
 

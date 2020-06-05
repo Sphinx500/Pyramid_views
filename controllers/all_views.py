@@ -9,7 +9,7 @@ from pyramid.view import view_config
 @view_config(route_name='intro')
 def home_page(request):
     header = '<h2 style="text-align: center;">Home Page</h2>'
-    body = '<br><br><p style="text-align: center; font-family: verdana; color: purple;">HOLA, MI NOMBRE ES FERNANDO.</p>'
+    body = '<br><br><p style="text-align: center; font-family: verdana; color: purple;">HOLA, MI NOMBRE ES FERNANDO.</p><body style="background-color:#96F7">'
     body += '<p style="text-align: center; font-family: verdana;"> Esta es mi segunda app de pyramid.</p>'
     footer = '<p style="text-align: center; font-family: verdana;">Para <a href="/fer">mas información</a>.</p>'
 
@@ -21,6 +21,6 @@ def home_page(request):
 @view_config(route_name='fer')
 def fer_history(request):
     header = '<h2 style="text-align: center;">Fernando Hernadez Vazquez</h2>'
-    job1 = '<p style="text-align: center; font-family: verdana;">Universidad tecnologica de Tulancingo</p><p style="text-align: center">HOLAA</p>'
+    data = '<p style="text-align: center; font-family: verdana;">Universidad tecnologica de Tulancingo</p><p style="text-align: center">HOLAA</p><body style="background-color:#7BA1FC">'
 
-    return Response(header + job1)
+    return Response(header + data)
