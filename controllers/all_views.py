@@ -22,6 +22,6 @@ def home_page(request):
 @view_config(route_name='fer')
 def fer_history(request):
     header = '<h2 style="text-align: center;">Fernando Hernadez Vazquez</h2>'
-    job1 = '<p style="text-align: center; font-family: verdana;">Universidad tecnologica de Tulancingo</p>'
+    job1 = '<p style="text-align: center; font-family: verdana;">Universidad tecnologica de Tulancingo</p><p>HOLAA</p>'
 
     return Response(header + job1)
